@@ -1,4 +1,4 @@
-![image](https://github.com/jaifenny/jaifenny.github.io/assets/73545269/7f223903-29d4-408e-944b-800140106437)# jaifenny.github.io
+# jaifenny.github.io
 ## :small_blue_diamond:web_project1
 - Simple web page production for "movie theater".
     - URL: [Showy](https://jaifenny.github.io/web_project1/company.html)
