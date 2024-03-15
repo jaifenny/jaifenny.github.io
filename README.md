@@ -1,4 +1,4 @@
-# jaifenny.github.io
+![image](https://github.com/jaifenny/jaifenny.github.io/assets/73545269/7f223903-29d4-408e-944b-800140106437)# jaifenny.github.io
 ## :small_blue_diamond:web_project1
 - Simple web page production for "movie theater".
     - URL: [Showy](https://jaifenny.github.io/web_project1/company.html)
@@ -11,3 +11,15 @@
         - 財務報表頁面: 奇數列、偶數列、標題列都有顏色變化，滑鼠游標移過去該列的底色會改變
         - 行事曆頁面: 滑鼠游標移過去，可以看到這個月的行程內容，利用底色不同標示當月有行程的日期
         - 意見回饋頁面: 製作能以e-mail傳送的表單,將e-mail傳送到管理者信箱
+
+## :small_blue_diamond:web_project2
+- Web-based game: roulette
+    - URL: [Roulette](https://jaifenny.github.io/web_project2/roulette.html)
+    - Introduction:
+        - 程式碼包括使用 CSS 進行佈局和外觀的樣式，以及用於控制 HTML 文件中元素行為的 JavaScript 函數
+        - "Start" 按鈕可以啟動遊戲的旋轉動畫
+        - 多種投注方式(行、列、奇數、偶數、區、1-18、19-36、顏色)
+        - 選擇投注號碼(選擇後呈紅色)
+        - 原始籌碼為10000元，押注任何一個數字均扣20元，若押重得獎號碼則加600元
+        - 輪盤開始懸轉後，會隨機轉到一個數字，在設定的時間後，旋轉動畫停止，獲勝的單元格被確定，根據所選單元格計算獎金並更新總金額
+
