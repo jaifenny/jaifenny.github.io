@@ -1,0 +1,660 @@
+<html>
+
+<style>
+			body {
+				background-color: #99bbff;
+				font-family: 'Arial';
+				user-select: none;
+			}
+
+			table td{
+				text-shadow: 0 1px 0 black;
+				text-align: center;
+				color: #0099CC;
+			}
+			table td.red ,table td.black ,table td.rblue ,table td.bblue {
+				width: 36px;
+				height: 36px;
+				border-left: 1px solid #fff;
+				border-bottom: 1px solid #fff;
+
+			}
+			.rot270{
+				transform: rotate(270deg);
+			}
+            
+            
+			table td.a_red,table td.a_black,table td.a_rblue,table td.a_bblue {
+				border-left: 1px solid white;
+				border-bottom: 1px solid white;
+			}
+			table td.red,table td.a_red {
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FDEB71), color-stop(100%,#F8D800)); /* Chrome,Safari4+ */
+
+			}
+			table td.black,table td.a_black {
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#70F570), color-stop(100%,#49C628)); /* Chrome,Safari4+ */
+			
+			}
+            table td.rblue,table td.a_rblue {
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEB692), color-stop(100%,#EA5455)); /* Chrome,Safari4+ */
+			
+			}
+            table td.bblue,table td.a_bblue {
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEB692), color-stop(100%,#EA5455)); /* Chrome,Safari4+ */
+			
+			}
+            
+			.le_1{
+				border: 1px solid #fff;
+			}
+			table td.le {
+				border: 1px solid #fff;
+				border-top: none;
+				width: 36px;
+				height: 40px;
+			}
+			
+			.lor {
+				border-left: 1px solid white;
+				border-bottom: 1px solid white;
+				height: 38px;
+			}
+			.flor {
+				border-right: 1px solid white;
+			}
+			.tor {
+				border-right: 1px solid white;
+				border-bottom: 1px solid white;
+			}
+
+			.zb {
+				vertical-align: top;
+			}
+			
+
+			.container {
+				margin: 0 auto;
+				width: 500px;
+			}
+
+
+</style>
+
+<head>
+<title></title>
+</head>
+
+<body>
+
+<script language="JavaScript">
+//--------------------------------
+var i1=Math.floor(Math.random() * 36)+1;
+
+function getdiv(id1,x2,y2,w2,h2,color2,text2){
+document.writeln("<div id='"+id1+"' style='position:absolute;top:"+y2+";left:"+x2+";width:"+w2+";height:"+h2+";background-color:"+color2+";font-size:15px'>"+text2+"</div>");
+}
+
+var r = 150;
+var x=250,y=200;
+
+for(i=10;i<=360;i+=10){
+	getdiv("c"+i,x+r*Math.cos((i+270)*(Math.PI/180))-6,y+r*Math.sin((i+270)*(Math.PI/180))-6,15,15,"#ccccff",i/10);
+}
+
+function move(){
+
+i1++;
+if(i1>36) i1=1;
+
+document.getElementById("position").innerHTML=i1;
+
+var i2=i1*10;
+var id1="c"+i2;
+var id2,id3,id4,id5,id6,id7,id8;
+
+if (i1==1) {
+	id2="c"+(36*10);
+	id3="c"+(35*10);
+	id4="c"+(34*10);
+	id5="c"+(33*10);
+	id6="c"+(32*10);
+	id7="c"+(31*10);
+	id8="c"+(30*10);
+} 
+else if (i1==2) {
+	id2="c"+(1*10);
+	id3="c"+(36*10);
+	id4="c"+(35*10);
+	id5="c"+(34*10);
+	id6="c"+(33*10);
+	id7="c"+(32*10);
+	id8="c"+(31*10);
+
+}
+else if (i1==3) {
+	id2="c"+(2*10);
+	id3="c"+(1*10);
+	id4="c"+(36*10);
+	id5="c"+(35*10);
+	id6="c"+(34*10);
+	id7="c"+(33*10);
+	id8="c"+(32*10);
+
+}
+else if (i1==4) {
+	id2="c"+(3*10);
+	id3="c"+(2*10);
+	id4="c"+(1*10);
+	id5="c"+(36*10);
+	id6="c"+(35*10);
+	id7="c"+(34*10);
+	id8="c"+(33*10);
+
+}
+else if (i1==5) {
+	id2="c"+(4*10);
+	id3="c"+(3*10);
+	id4="c"+(2*10);
+	id5="c"+(1*10);
+	id6="c"+(36*10);
+	id7="c"+(35*10);
+	id8="c"+(34*10);
+
+}
+else if (i1==6) {
+	id2="c"+(5*10);
+	id3="c"+(4*10);
+	id4="c"+(3*10);
+	id5="c"+(2*10);
+	id6="c"+(1*10);
+	id7="c"+(36*10);
+	id8="c"+(35*10);
+
+}
+else if (i1==7) {
+	id2="c"+(6*10);
+	id3="c"+(5*10);
+	id4="c"+(4*10);
+	id5="c"+(3*10);
+	id6="c"+(2*10);
+	id7="c"+(1*10);
+	id8="c"+(36*10);
+
+} 
+else{
+	id2="c"+((i1-1)*10);
+	id3="c"+((i1-2)*10);
+	id4="c"+((i1-3)*10);
+	id5="c"+((i1-4)*10);
+	id6="c"+((i1-5)*10);
+	id7="c"+((i1-6)*10);
+	id8="c"+((i1-7)*10);
+}
+
+document.getElementById(id8).style.backgroundColor= "#ccccff";
+document.getElementById(id7).style.backgroundColor= "#6400ff";
+document.getElementById(id6).style.backgroundColor= "#000080";
+document.getElementById(id5).style.backgroundColor= "#0000ff";
+document.getElementById(id4).style.backgroundColor= "#00ff00";
+document.getElementById(id3).style.backgroundColor= "#ffff00";
+document.getElementById(id2).style.backgroundColor= "#ff6400";
+document.getElementById(id1).style.backgroundColor= "#ff0000";
+
+}
+
+var total=10000;
+
+function checkwin()
+{
+
+	total-=(cost()*20);
+	var choise = "cell" + i1;
+    var g = document.getElementById(choise);
+    if(g.className == "bblue"){
+    	total+=20*30;
+	}
+    else if(g.className == "rblue"){
+    	total+=20*30;
+    }
+    document.getElementById("money").innerHTML="$ " + total + "";
+}
+
+var test=0;
+ 
+function Stopmoving()
+{
+	test=0;
+	clearInterval(run1) ;
+	checkwin();
+    reset();
+}
+
+function Startgame()
+{
+	if(test!=2){
+	for(var k=1;k<=36;k++){
+    	var name = "cell" + k ;
+        var s =document.getElementById(name);
+		if(s.className == "bblue"){
+        	test=0;
+            break;
+        }
+   		else if(s.className == "rblue"){
+        	test=0;
+            break;
+        }
+        else 
+            test=1;
+	}
+    }
+	if(test==0){
+		test=2;
+		var t = Math.floor(Math.random() * 1500) + 2500;
+		run1 = window.setInterval('move()' , 20);        
+    	window.setTimeout('Stopmoving()' , t);
+    }
+}
+
+function reset(){
+	for(var k=1;k<=36;k++){
+    	var name = "cell" + k ;
+        var s =document.getElementById(name);
+        if(s.className == "bblue"){
+    		s.className="black";
+		}
+   		else if(s.className == "rblue"){
+    		s.className="red";
+		}
+    }
+    
+}
+
+//==============================================
+
+function putmoney(obj){
+		if (obj.className == "red"){
+			obj.className = "rblue" ;
+		}
+        else if (obj.className == "black"){
+			obj.className = "bblue" ;
+		}
+        else if (obj.className == "rblue"){
+			obj.className = "red" ;
+		}
+        else if (obj.className == "bblue"){
+			obj.className = "black" ;
+		}
+    	document.getElementById("money").innerHTML="$ " + (total-(cost()*20)) + "";
+	}
+    
+    function putmoney1(name){
+    	if(name==btn1){
+        	document.getElementById("cell1").className = "rblue";
+            document.getElementById("cell2").className = "bblue";
+            document.getElementById("cell3").className = "rblue";
+        }
+        if(name==btn2){
+        	document.getElementById("cell4").className = "bblue";
+            document.getElementById("cell5").className = "rblue";
+            document.getElementById("cell6").className = "bblue";
+        }
+        if(name==btn3){
+        	document.getElementById("cell7").className = "rblue";
+            document.getElementById("cell8").className = "bblue";
+            document.getElementById("cell9").className = "rblue";
+        }
+        if(name==btn4){
+        	document.getElementById("cell10").className = "bblue";
+            document.getElementById("cell11").className = "bblue";
+            document.getElementById("cell12").className = "rblue";
+        }
+        if(name==btn5){
+        	document.getElementById("cell13").className = "bblue";
+            document.getElementById("cell14").className = "rblue";
+            document.getElementById("cell15").className = "bblue";
+        }
+        if(name==btn6){
+        	document.getElementById("cell16").className = "rblue";
+            document.getElementById("cell17").className = "bblue";
+            document.getElementById("cell18").className = "rblue";
+        }
+        if(name==btn7){
+        	document.getElementById("cell19").className = "bblue";
+            document.getElementById("cell20").className = "bblue";
+            document.getElementById("cell21").className = "rblue";
+        }
+        if(name==btn8){
+        	document.getElementById("cell22").className = "bblue";
+            document.getElementById("cell23").className = "rblue";
+            document.getElementById("cell24").className = "bblue";
+        }
+        if(name==btn9){
+        	document.getElementById("cell25").className = "rblue";
+            document.getElementById("cell26").className = "bblue";
+            document.getElementById("cell27").className = "rblue";
+        }
+        if(name==btn10){
+        	document.getElementById("cell28").className = "rblue";
+            document.getElementById("cell29").className = "bblue";
+            document.getElementById("cell30").className = "rblue";
+        }
+        if(name==btn11){
+        	document.getElementById("cell31").className = "bblue";
+            document.getElementById("cell32").className = "rblue";
+            document.getElementById("cell33").className = "bblue";
+        }
+        if(name==btn12){
+        	document.getElementById("cell34").className = "rblue";
+            document.getElementById("cell35").className = "bblue";
+            document.getElementById("cell36").className = "rblue";
+        }
+        if(name==13){
+			document.getElementById("cell1").className = "rblue";
+            document.getElementById("cell2").className = "bblue";
+            document.getElementById("cell3").className = "rblue";
+            document.getElementById("cell4").className = "bblue";
+            document.getElementById("cell5").className = "rblue";
+            document.getElementById("cell6").className = "bblue";
+            document.getElementById("cell7").className = "rblue";
+            document.getElementById("cell8").className = "bblue";
+            document.getElementById("cell9").className = "rblue";
+            document.getElementById("cell10").className = "bblue";
+            document.getElementById("cell11").className = "bblue";
+            document.getElementById("cell12").className = "rblue";   
+        }
+        if(name==14){
+			document.getElementById("cell13").className = "bblue";
+            document.getElementById("cell14").className = "rblue";
+            document.getElementById("cell15").className = "bblue";
+            document.getElementById("cell16").className = "rblue";
+            document.getElementById("cell17").className = "bblue";
+            document.getElementById("cell18").className = "rblue";
+            document.getElementById("cell19").className = "bblue";
+            document.getElementById("cell20").className = "bblue";
+            document.getElementById("cell21").className = "rblue";
+            document.getElementById("cell22").className = "bblue";
+            document.getElementById("cell23").className = "rblue";
+            document.getElementById("cell24").className = "bblue";
+        }
+        if(name==15){
+			document.getElementById("cell25").className = "rblue";
+            document.getElementById("cell26").className = "bblue";
+            document.getElementById("cell27").className = "rblue";
+            document.getElementById("cell28").className = "rblue";
+            document.getElementById("cell29").className = "bblue";
+            document.getElementById("cell30").className = "rblue";
+            document.getElementById("cell31").className = "bblue";
+            document.getElementById("cell32").className = "rblue";
+            document.getElementById("cell33").className = "bblue";
+            document.getElementById("cell34").className = "rblue";
+            document.getElementById("cell35").className = "bblue";
+            document.getElementById("cell36").className = "rblue";
+        }
+        if(name==16){
+			document.getElementById("cell1").className = "rblue";
+            document.getElementById("cell2").className = "bblue";
+            document.getElementById("cell3").className = "rblue";
+            document.getElementById("cell4").className = "bblue";
+            document.getElementById("cell5").className = "rblue";
+            document.getElementById("cell6").className = "bblue";
+            document.getElementById("cell7").className = "rblue";
+            document.getElementById("cell8").className = "bblue";
+            document.getElementById("cell9").className = "rblue";
+            document.getElementById("cell10").className = "bblue";
+            document.getElementById("cell11").className = "bblue";
+            document.getElementById("cell12").className = "rblue";   
+			document.getElementById("cell13").className = "bblue";
+            document.getElementById("cell14").className = "rblue";
+            document.getElementById("cell15").className = "bblue";
+            document.getElementById("cell16").className = "rblue";
+            document.getElementById("cell17").className = "bblue";
+            document.getElementById("cell18").className = "rblue";
+        }
+        if(name==17){	        	
+            document.getElementById("cell2").className = "bblue";            
+            document.getElementById("cell4").className = "bblue";            
+            document.getElementById("cell6").className = "bblue";           
+            document.getElementById("cell8").className = "bblue";            
+            document.getElementById("cell10").className = "bblue";
+            document.getElementById("cell12").className = "rblue";   			
+            document.getElementById("cell14").className = "rblue";            
+            document.getElementById("cell16").className = "rblue";           
+            document.getElementById("cell18").className = "rblue";            
+            document.getElementById("cell20").className = "bblue";           
+            document.getElementById("cell22").className = "bblue";           
+            document.getElementById("cell24").className = "bblue";			
+            document.getElementById("cell26").className = "bblue";           
+            document.getElementById("cell28").className = "rblue";           
+            document.getElementById("cell30").className = "rblue";           
+            document.getElementById("cell32").className = "rblue";            
+            document.getElementById("cell34").className = "rblue";            
+            document.getElementById("cell36").className = "rblue";
+        }
+        if(name==18){
+        	document.getElementById("cell1").className = "rblue";
+            document.getElementById("cell3").className = "rblue";
+            document.getElementById("cell5").className = "rblue";
+            document.getElementById("cell7").className = "rblue";
+            document.getElementById("cell9").className = "rblue";
+            document.getElementById("cell12").className = "rblue";
+            document.getElementById("cell14").className = "rblue";
+            document.getElementById("cell16").className = "rblue";
+            document.getElementById("cell18").className = "rblue";
+            document.getElementById("cell21").className = "rblue";
+            document.getElementById("cell23").className = "rblue";
+            document.getElementById("cell25").className = "rblue";
+            document.getElementById("cell27").className = "rblue";
+            document.getElementById("cell28").className = "rblue";
+            document.getElementById("cell30").className = "rblue";
+            document.getElementById("cell32").className = "rblue";
+            document.getElementById("cell34").className = "rblue";
+            document.getElementById("cell36").className = "rblue";
+        }
+        if(name==19){
+        	document.getElementById("cell2").className = "bblue";
+            document.getElementById("cell4").className = "bblue";
+            document.getElementById("cell8").className = "bblue";
+            document.getElementById("cell6").className = "bblue";
+            document.getElementById("cell10").className = "bblue";
+            document.getElementById("cell11").className = "bblue";
+            document.getElementById("cell13").className = "bblue";
+            document.getElementById("cell15").className = "bblue";
+            document.getElementById("cell17").className = "bblue";
+            document.getElementById("cell19").className = "bblue";
+            document.getElementById("cell20").className = "bblue";
+            document.getElementById("cell22").className = "bblue";
+            document.getElementById("cell24").className = "bblue";
+            document.getElementById("cell26").className = "bblue";
+            document.getElementById("cell29").className = "bblue";
+            document.getElementById("cell31").className = "bblue";
+            document.getElementById("cell33").className = "bblue";
+            document.getElementById("cell35").className = "bblue";
+        }
+        if(name==20){
+        	document.getElementById("cell1").className = "rblue";            
+            document.getElementById("cell3").className = "rblue";            
+            document.getElementById("cell5").className = "rblue";            
+            document.getElementById("cell7").className = "rblue";           
+            document.getElementById("cell9").className = "rblue";           
+            document.getElementById("cell11").className = "bblue";              
+			document.getElementById("cell13").className = "bblue";           
+            document.getElementById("cell15").className = "bblue";            
+            document.getElementById("cell17").className = "bblue";            
+            document.getElementById("cell19").className = "bblue";            
+            document.getElementById("cell21").className = "rblue";            
+            document.getElementById("cell23").className = "rblue";            
+			document.getElementById("cell25").className = "rblue";            
+            document.getElementById("cell27").className = "rblue";            
+            document.getElementById("cell29").className = "bblue";           
+            document.getElementById("cell31").className = "bblue";            
+            document.getElementById("cell33").className = "bblue";            
+            document.getElementById("cell35").className = "bblue";    
+        }
+        if(name==21){
+        	document.getElementById("cell19").className = "bblue";
+            document.getElementById("cell20").className = "bblue";
+            document.getElementById("cell21").className = "rblue";
+            document.getElementById("cell22").className = "bblue";
+            document.getElementById("cell23").className = "rblue";
+            document.getElementById("cell24").className = "bblue";
+			document.getElementById("cell25").className = "rblue";
+            document.getElementById("cell26").className = "bblue";
+            document.getElementById("cell27").className = "rblue";
+            document.getElementById("cell28").className = "rblue";
+            document.getElementById("cell29").className = "bblue";
+            document.getElementById("cell30").className = "rblue";
+            document.getElementById("cell31").className = "bblue";
+            document.getElementById("cell32").className = "rblue";
+            document.getElementById("cell33").className = "bblue";
+            document.getElementById("cell34").className = "rblue";
+            document.getElementById("cell35").className = "bblue";
+            document.getElementById("cell36").className = "rblue";
+        }
+        if(name==22){
+        	document.getElementById("cell3").className = "rblue";
+            document.getElementById("cell6").className = "bblue";
+            document.getElementById("cell9").className = "rblue";
+            document.getElementById("cell12").className = "rblue";
+            document.getElementById("cell15").className = "bblue";
+            document.getElementById("cell18").className = "rblue";
+            document.getElementById("cell21").className = "rblue";
+            document.getElementById("cell24").className = "bblue";
+            document.getElementById("cell27").className = "rblue";
+            document.getElementById("cell30").className = "rblue";
+            document.getElementById("cell33").className = "bblue";
+            document.getElementById("cell36").className = "rblue";
+        }
+        if(name==23){
+        	document.getElementById("cell2").className = "bblue";
+            document.getElementById("cell5").className = "rblue";
+            document.getElementById("cell8").className = "bblue";
+            document.getElementById("cell11").className = "bblue";
+            document.getElementById("cell14").className = "rblue";
+            document.getElementById("cell17").className = "bblue";
+            document.getElementById("cell20").className = "bblue";
+            document.getElementById("cell23").className = "rblue";
+            document.getElementById("cell26").className = "bblue";
+            document.getElementById("cell29").className = "bblue";
+            document.getElementById("cell32").className = "rblue";
+            document.getElementById("cell35").className = "bblue";            
+        }
+        if(name==24){	
+            document.getElementById("cell1").className = "rblue";
+            document.getElementById("cell4").className = "bblue";
+            document.getElementById("cell7").className = "rblue";
+            document.getElementById("cell10").className = "bblue";
+            document.getElementById("cell13").className = "bblue";
+            document.getElementById("cell16").className = "rblue";
+            document.getElementById("cell19").className = "bblue";
+            document.getElementById("cell22").className = "bblue";
+            document.getElementById("cell25").className = "rblue";
+            document.getElementById("cell28").className = "rblue";
+            document.getElementById("cell31").className = "bblue";
+            document.getElementById("cell34").className = "rblue";
+        }
+        document.getElementById("money").innerHTML="$ " + (total-(cost()*20)) + "";
+    }        
+    
+    function cost(){
+    	var cost=0;
+    	for(var i=1;i<=36;i++){
+        	var cell = "cell" + i;
+            var x = document.getElementById(cell);
+            if(x.className=="bblue" || x.className=="rblue"){
+            	cost++;
+            }
+        }
+        return cost;
+    }
+
+</script>
+<p>&nbsp;</p>
+<div id="position" onClick="Startgame()" style="position:absolute;top:180;left:225;width:50;height:49;font-size:30px">start</div>
+<div class="container">
+		<div><table  border="0" cellspacing="0" cellpadding="0">
+        	<tr>
+				<td id="btn1" onclick="putmoney1(btn1)">a</td>
+				<td id="btn2" onclick="putmoney1(btn2)">b</td>
+				<td id="btn3" onclick="putmoney1(btn3)">c</td>
+				<td id="btn4" onclick="putmoney1(btn4)">d</td>
+				<td id="btn5" onclick="putmoney1(btn5)">e</td>
+				<td id="btn6" onclick="putmoney1(btn6)">f</td>
+				<td id="btn7" onclick="putmoney1(btn7)">g</td>
+				<td id="btn8" onclick="putmoney1(btn8)">h</td>
+				<td id="btn9" onclick="putmoney1(btn9)">i</td>
+				<td id="btn10" onclick="putmoney1(btn10)">j</td>
+				<td id="btn11" onclick="putmoney1(btn11)">k</td>
+				<td id="btn12" onclick="putmoney1(btn12)">l</td>
+			</tr>
+
+			<tr>
+				<td id="cell3" onclick="putmoney(this)" class="red" style="border-top: 1px solid white;"><div>3</div></td>
+				<td id="cell6" onclick="putmoney(this)" class="black" style="border-top: 1px solid white;"><div>6</div></td>
+				<td id="cell9" onclick="putmoney(this)" class="red" style="border-top: 1px solid white;"><div>9</div></td>
+				<td id="cell12" onclick="putmoney(this)" class="red" style="border-top: 1px solid white;"><div>12</div></td>
+				<td id="cell15" onclick="putmoney(this)" class="black" style="border-top: 1px solid white;"><div>15</div></td>
+				<td id="cell18" onclick="putmoney(this)" class="red" style="border-top: 1px solid white;"><div>18</div></td>
+				<td id="cell21" onclick="putmoney(this)" class="red" style="border-top: 1px solid white;"><div>21</div></td>
+				<td id="cell24" onclick="putmoney(this)" class="black" style="border-top: 1px solid white;"><div>24</div></td>
+				<td id="cell27" onclick="putmoney(this)" class="red" style="border-top: 1px solid white;"><div>27</div></td>
+				<td id="cell30" onclick="putmoney(this)" class="red" style="border-top: 1px solid white;"><div>30</div></td>
+				<td id="cell33" onclick="putmoney(this)" class="black" style="border-top: 1px solid white;"><div>33</div></td>
+				<td id="cell36" onclick="putmoney(this)" class="red" style="border-top: 1px solid white;"><div>36</div></td>
+				<td onclick="putmoney1(22)" class="le_1"><div>A</div></td>
+			</tr>
+			<tr>
+				<td id="cell2" onclick="putmoney(this)" class="black"><div>2</div></td>
+				<td id="cell5" onclick="putmoney(this)" class="red"><div>5</div></td>
+				<td id="cell8" onclick="putmoney(this)" class="black"><div>8</div></td>
+				<td id="cell11" onclick="putmoney(this)" class="black"><div>11</div></td>
+				<td id="cell14" onclick="putmoney(this)" class="red"><div>14</div></td>
+				<td id="cell17" onclick="putmoney(this)" class="black"><div>17</div></td>
+				<td id="cell20" onclick="putmoney(this)" class="black"><div>20</div></td>
+				<td id="cell23" onclick="putmoney(this)" class="red"><div>23</div></td>
+				<td id="cell26" onclick="putmoney(this)" class="black"><div>26</div></td>
+				<td id="cell29" onclick="putmoney(this)" class="black"><div>29</div></td>
+				<td id="cell32" onclick="putmoney(this)" class="red"><div>32</div></td>
+				<td id="cell35" onclick="putmoney(this)" class="black"><div>35</div></td>
+				<td onclick="putmoney1(23)" class="le"><div>B</div></td>
+			</tr>
+			<tr>
+				<td id="cell1" onclick="putmoney(this)" class="red"><div>1</div></td>
+				<td id="cell4" onclick="putmoney(this)" class="black"><div>4</div></td>
+				<td id="cell7" onclick="putmoney(this)" class="red"><div>7</div></td>
+				<td id="cell10" onclick="putmoney(this)" class="black"><div>10</div></td>
+				<td id="cell13" onclick="putmoney(this)" class="black"><div>13</div></td>
+				<td id="cell16" onclick="putmoney(this)" class="red"><div>16</div></td>
+				<td id="cell19" onclick="putmoney(this)" class="black"><div>19</div></td>
+				<td id="cell22" onclick="putmoney(this)" class="black"><div>22</div></td>
+				<td id="cell25" onclick="putmoney(this)" class="red"><div>25</div></td>
+				<td id="cell28" onclick="putmoney(this)" class="red"><div>28</div></td>
+				<td id="cell31" onclick="putmoney(this)" class="black"><div>31</div></td>
+				<td id="cell34" onclick="putmoney(this)" class="red"><div>34</div></td>
+				<td onclick="putmoney1(24)" class="le"><div>C</div></td>
+			</tr>
+			<tr>
+				
+				<td onclick="putmoney1(13)" class="lor" colspan="4">1 st</td>
+				<td onclick="putmoney1(14)" class="lor" colspan="4">2 nd</td>
+				<td onclick="putmoney1(15)" class="lor flor" colspan="4">3 rd</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td onclick="putmoney1(16)" class="lor" colspan="2">1-18</td>
+				<td onclick="putmoney1(17)" class="lor" colspan="2">Even</td>
+				<td onclick="putmoney1(18)" colspan="2" class="a_red">Yellow</td>
+				<td onclick="putmoney1(19)" colspan="2" class="a_black">Green</td>
+				<td onclick="putmoney1(20)" class="lor" colspan="2">Odd</td>
+				<td onclick="putmoney1(21)" class="lor flor" colspan="2">19-36</td>
+			</tr>
+		</table>
+<h1 id="money">$ 10000</h1>
+		</div>
+	</div>
+
+
+
+
+</body>
+</html>
